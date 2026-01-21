@@ -3,17 +3,36 @@ body {
 }
 
 nav {
+  display: flex;
+  justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
   padding: 50px;
   background-color: rgb(0, 0, 128, .5);
-  display: flex;
-  justify-content: space-around;
   font-size: xx-large;
   font-weight: bold;
 }
 
-nav > a {
+nav > div {
+  display: flex;
+  align-items: center;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
   padding: 10px;
   border: 2px solid black;
   border-radius: 20px;
+  list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
 }
