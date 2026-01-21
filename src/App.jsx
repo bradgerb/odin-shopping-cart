@@ -1,15 +1,18 @@
 // import { useState } from 'react'
 import './App.css'
+import Home from './components/Home'
 
 function App() {
 
   return (
     <>
       <nav>
-        <div>Home</div>
-        <div>Shop</div>
-        <div>Cart</div>
+        <a>Home</a>
+        <a>Shop</a>
+        <a>Cart</a>
       </nav>
+
+      <Home/>
     </>
   )
 }
