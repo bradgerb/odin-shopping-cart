@@ -1,10 +1,13 @@
 const Cart = () => {
+
   return (
-    <div>
-      <h1>Hello from profile page!</h1>
-      <p>So, how are you?</p>
-    </div>
-  );
-};
+    <>
+      <div>
+        <h1>This is a cart</h1>
+        <p>You can buy things</p>
+      </div>
+    </>
+  )
+}
 
 export default Cart;

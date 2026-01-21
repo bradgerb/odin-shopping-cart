@@ -1,0 +1,5 @@
+.errorBack > a {
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 30px;
+}
