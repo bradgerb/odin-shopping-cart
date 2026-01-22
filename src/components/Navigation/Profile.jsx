@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
-import DefaultProfile from "./Pages/DefaultProfile";
+import DefaultProfile from "../Pages/DefaultProfile";
 import Nav from "./Nav";
-import Home from "./Pages/Home";
-import Shop from "./Pages/Shop";
-import Cart from "./Pages/Cart";
+import Home from "../Pages/Home";
+import Shop from "../Pages/Shop";
+import Cart from "../Pages/Cart";
 
 const Profile = () => {
   const { name } = useParams();

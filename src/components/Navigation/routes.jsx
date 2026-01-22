@@ -1,6 +1,6 @@
-import App from "../App";
+import App from "../../App";
 import Profile from "./Profile";
-import Error from "./Error/Error";
+import Error from "../Error/Error";
 
 const routes = [
   {
