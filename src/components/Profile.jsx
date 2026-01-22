@@ -10,7 +10,7 @@ const Profile = () => {
 
   return (
     <div>
-        <Nav />
+      <Nav />
       {name === "home" ? (
         <Home />
       ) : name === "shop" ? (
