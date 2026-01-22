@@ -6,7 +6,8 @@ const App = () => {
   return (
     <div>
       <Nav />
-      <Outlet />
+      <h1>Welcome to the default page!</h1>
+      {/* <Outlet /> */}
     </div>
   );
 };
