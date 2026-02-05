@@ -1,5 +1,9 @@
 const Cart = () => {
 
+  // fetch('https://fakestoreapi.com/carts/1')
+  // .then(response => response.json())
+  // .then(data => console.log(data));
+
   return (
     <>
       <div>
