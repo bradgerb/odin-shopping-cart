@@ -1,11 +1,10 @@
-import Home from "./Home";
-// import 
-
 const DefaultProfile = () => {
 
   return (
     <>
-      <Home />
+      <div>
+        <h1>Welcome to the default page</h1>
+      </div>
     </>
   )
 }
