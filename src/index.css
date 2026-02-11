@@ -45,3 +45,7 @@ h1 {
 .card {
   border: 1px solid black;
 }
+
+.grid {
+  margin: 10px;
+}

@@ -1,34 +1,21 @@
-// import { useState, useEffect } from "react";
+import { Card } from "./Card"
 
-const ShopGrid = ()=> {
+const ShopGrid = ({shopItems})=> {
 
-    // const [shopItems, setShopItems] = useState([]);
-
-    // useEffect(()=> {
-
-    //     const numberOfProducts = [];
-    //     for(let i = 1; i <= 5; i++){
-    //         numberOfProducts.push(i);
-    //     }
-
-    //     const storeData = Promise.all(
-    //         [...numberOfProducts].map(async (id) => {
-    //             const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-    //             const data = await response.json();
-    //             // console.log(data);
-    //             setShopItems(data);
-    //         })
-    //     )
-    //         // console.log(storeData);
-    //     },[])
-
-    // return (
-    //     <>
-    //         <div>
-    //             {stor}
-    //         </div>
-    //     </>
-    // )
+    return (
+        <>
+            {shopItems.map((image)=>(
+                <div key={image.id}>
+                    <Card
+                        number = { image.id }
+                        title = { image.title }
+                        price = { image.price }
+                        description = { image.description }
+                    />
+                </div>
+            ))}
+        </>
+    )
 
 }
 
