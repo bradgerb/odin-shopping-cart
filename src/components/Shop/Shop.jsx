@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { dataFetch } from "../Data/dataFetch";
-import { ShopGrid } from "../Data/ShopGrid";
+import { ShopGrid } from "./ShopGrid";
 import Nav from "../Navigation/Nav";
 
 const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {

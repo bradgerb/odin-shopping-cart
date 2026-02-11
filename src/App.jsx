@@ -1,9 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { useState } from 'react';
 import './App.css'
-import Home from './components/Pages/Home';
-import Shop from './components/Pages/Shop';
-import Cart from './components/Pages/Cart';
+import Home from './components/Home/Home';
+import Shop from './components/Shop/Shop';
+import Cart from './components/Cart/Cart';
 import Error from './components/Error/Error';
 
 const App = () => {
