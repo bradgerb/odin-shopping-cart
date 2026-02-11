@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { dataFetch } from "../Data/dataFetch";
 import { ShopGrid } from "./ShopGrid";
 import Nav from "../Navigation/Nav";
+import './Shop.css'
 
 const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
 

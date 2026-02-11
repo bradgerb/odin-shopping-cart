@@ -1,4 +1,5 @@
 import { Card } from "../Cards/Card"
+import './Shop.css'
 
 const ShopGrid = ({shopItems})=> {
 
