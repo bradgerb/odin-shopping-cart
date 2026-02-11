@@ -41,3 +41,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.card {
+  border: 1px solid black;
+}
