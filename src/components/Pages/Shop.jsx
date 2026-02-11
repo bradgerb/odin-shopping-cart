@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { dataFetch } from "../Data/dataFetch";
 import { ShopGrid } from "../Data/ShopGrid";
+import Nav from "../Navigation/Nav";
 
 const Shop = () => {
 
@@ -16,6 +17,7 @@ const Shop = () => {
 
   return (
     <>
+        <Nav />
         <div>
             <h1>This is a shop!</h1>
             
