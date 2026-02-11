@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { dataFetch } from "../Data/dataFetch";
 import { ShopGrid } from "../Data/ShopGrid";
 import Nav from "../Navigation/Nav";
 
-const Shop = () => {
-
-    const [shopItems, setShopItems] = useState([]);
+const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
 
     useEffect(() => {
         const getShopData = async()=> {
@@ -13,7 +11,7 @@ const Shop = () => {
             setShopItems(shopData);
         }
         getShopData();
-    }, []);
+    }, [setShopItems]);
 
   return (
     <>

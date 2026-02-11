@@ -1,6 +1,6 @@
 import Nav from "../Navigation/Nav";
 
-const Cart = () => {
+const Cart = ({cartItems, setCartItems}) => {
 
   return (
     <>

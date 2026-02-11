@@ -9,6 +9,7 @@ import Error from './components/Error/Error';
 const App = () => {
 
   const [shopItems, setShopItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const router = createBrowserRouter([
     {
@@ -21,21 +22,22 @@ const App = () => {
       element: <Shop 
         shopItems = {shopItems}
         setShopItems = {setShopItems}
+        cartItems = {cartItems}
+        setCartItems = {setCartItems}
       />
     },
     {
       path: "/cart",
-      element: <Cart />
+      element: <Cart 
+        cartItems = {cartItems}
+        setCartItems = {setCartItems}
+      />
     }
   ]);
   
 
   return (
     <RouterProvider router = {router} />
-    // <div>
-    //   <Nav />
-    //   <h1>Welcome to the home page of My Store!</h1>
-    // </div>
   );
 };
 
