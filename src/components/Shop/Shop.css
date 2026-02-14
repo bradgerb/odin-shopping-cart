@@ -1,7 +1,6 @@
-.card {
-  border: 1px solid black;
-}
-
 .grid {
+  display: flex;
+  justify-content: center;
   margin: 10px;
+  gap: 10px;
 }
