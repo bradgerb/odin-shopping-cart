@@ -14,7 +14,9 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <Home 
+        cartItems={cartItems}  
+      />,
       errorElement: <Error />
     },
     {

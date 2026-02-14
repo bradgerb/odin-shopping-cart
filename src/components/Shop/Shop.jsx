@@ -16,7 +16,9 @@ const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
 
   return (
     <>
-        <Nav />
+        <Nav 
+            cartItems={cartItems}
+        />
         <div>
             <h1>This is a shop!</h1>
             

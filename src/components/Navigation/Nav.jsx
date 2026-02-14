@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import './Nav.css';
 
-const Nav = () => {
-  
+const Nav = ({cartItems}) => {
+
   return (
       <nav>
         <div>
@@ -16,7 +16,7 @@ const Nav = () => {
             <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart ({cartItems.length})</Link>
           </li>
         </ul>
       </nav>

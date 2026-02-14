@@ -4,7 +4,9 @@ const Cart = ({cartItems, setCartItems}) => {
 
   return (
     <>
-      <Nav />
+      <Nav 
+        cartItems = {cartItems}
+      />
       <div>
         <h1>This is a cart</h1>
         <p>You can buy things</p>
