@@ -12,10 +12,15 @@ const Card = ({title, price, description, picture}) => {
         <>
             <div className="card">
                 <h1>{title}</h1>
-                <div className='image'><img src={picture} alt="Item image" width={100}/></div>
-                <div>{description}</div>
+                <div className='image'><img src={picture} alt="Item image" height={70}/></div>
+                <div className='text'>{description}</div>
                 <br />
-                <div>{priceDecimals}</div>
+                <div className='price'>{priceDecimals}</div>
+                <br />
+                <div className='cart'>
+                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" /></div>
+                    <button className="addToCart">Add to cart</button>
+                </div>
             </div>
         </>
     )
