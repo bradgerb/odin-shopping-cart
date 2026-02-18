@@ -13,6 +13,7 @@ const ShopGrid = ({shopItems})=> {
                         price = { image.price }
                         description = { image.description }
                         picture = { image.picture }
+                        rating = { image.rating }
                     />
                 </div>
             ))}
