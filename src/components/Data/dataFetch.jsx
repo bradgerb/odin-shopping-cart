@@ -1,7 +1,7 @@
 async function dataFetch() {
     const numberOfProducts = [];
 
-    for(let i = 1; i <= 5; i++){
+    for(let i = 1; i <= 20; i++){
         numberOfProducts.push(i);
     }
 
