@@ -1,6 +1,6 @@
-import './Card.css'
+import './ShopCard.css'
 
-const Card = ({title, price, description, picture, rating}) => {
+const ShopCard = ({number, title, price, description, picture, rating, cartItems, setCartItems}) => {
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {
@@ -32,6 +32,17 @@ const Card = ({title, price, description, picture, rating}) => {
         }
     }
     titleEdit();
+        
+    const handleClick = () => {
+        let cartObject = {
+            title: title,
+            price: price,
+            picture: picture,
+            quantity: 1,
+        };
+        console.log(cartObject);
+        setCartItems([...cartItems, cartObject]);
+    }
 
     return (
         <>
@@ -46,12 +57,12 @@ const Card = ({title, price, description, picture, rating}) => {
                 </div>
                 <br />
                 <div className='cart'>
-                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" /></div>
-                    <button className="addToCart">Add to cart</button>
+                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" id={number} /></div>
+                    <button className="addToCart" onClick={handleClick}>Add to cart</button>
                 </div>
             </div>
         </>
     )
 }
 
-export { Card }
+export { ShopCard }

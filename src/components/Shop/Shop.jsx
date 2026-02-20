@@ -25,6 +25,8 @@ const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
             <div className="grid">
                 <ShopGrid
                     shopItems = { shopItems }
+                    cartItems={ cartItems }
+                    setCartItems = { setCartItems }
                 />
             </div>
             
