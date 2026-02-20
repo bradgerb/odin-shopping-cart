@@ -1,5 +1,6 @@
 import Nav from "../Navigation/Nav";
-import { CartCard } from "../Cards/CartCard";
+import { CartGrid } from "./CardGrid";
+import './Cart.css'
 
 const Cart = ({cartItems, setCartItems}) => {
 
@@ -8,23 +9,15 @@ const Cart = ({cartItems, setCartItems}) => {
       <Nav 
         cartItems = {cartItems}
         setCartItems ={setCartItems}
-      />
-      <div>
-        <h1>This is a cart</h1>
-        <p>You can buy things</p>
+    />
 
-        {cartItems.map((cart)=>(
-            <div key={cart.id}>
-                <CartCard
-                    // number = { image.id }
-                    // title = { image.title }
-                    // price = { image.price }
-                    // picture = { image.picture }
-                    // quantity = { image.quantity }
-                />
-            </div>
-        ))}
+    <h1>This is a cart</h1>
 
+      <div className="cartGrid">
+        <CartGrid 
+          cartItems = { cartItems }
+          setCartItems = { setCartItems }
+        />
       </div>
     </>
   )

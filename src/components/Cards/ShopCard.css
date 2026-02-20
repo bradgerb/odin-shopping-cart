@@ -3,7 +3,7 @@ h1 {
     font-weight: bold;
 }
 
-.card {
+.shopCard {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -15,7 +15,7 @@ h1 {
     background-color: rgba(175, 238, 238, 0.3);
 }
 
-.card > .image {
+.shopCard > .image {
     display: flex;
     justify-content: center;
     margin-right: 5px;

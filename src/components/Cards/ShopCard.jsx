@@ -35,18 +35,18 @@ const ShopCard = ({number, title, price, description, picture, rating, cartItems
         
     const handleClick = () => {
         let cartObject = {
+            id: number,
             title: title,
             price: price,
             picture: picture,
             quantity: 1,
         };
-        console.log(cartObject);
         setCartItems([...cartItems, cartObject]);
     }
 
     return (
         <>
-            <div className="card">
+            <div className="shopCard">
                 <h1>{shortTitle}</h1>
                 <div className='image'><img src={picture} alt="Item image" height={70}/></div>
                 <div className='text'>{shortDescription}</div>

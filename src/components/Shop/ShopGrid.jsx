@@ -1,5 +1,4 @@
 import { ShopCard } from "../Cards/ShopCard"
-import './Shop.css'
 
 const ShopGrid = ({shopItems, cartItems, setCartItems})=> {
 
@@ -14,7 +13,7 @@ const ShopGrid = ({shopItems, cartItems, setCartItems})=> {
                         description = { image.description }
                         picture = { image.picture }
                         rating = { image.rating }
-                        cartItems={ cartItems }
+                        cartItems = { cartItems }
                         setCartItems = { setCartItems }
                     />
                 </div>

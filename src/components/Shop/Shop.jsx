@@ -22,7 +22,7 @@ const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
         <div>
             <h1>This is a shop!</h1>
             
-            <div className="grid">
+            <div className="shopGrid">
                 <ShopGrid
                     shopItems = { shopItems }
                     cartItems={ cartItems }

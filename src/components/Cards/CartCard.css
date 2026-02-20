@@ -1,0 +1,23 @@
+.cartCard {
+    display: flex;
+    width: 500px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartPrice {
+    display: flex;
+    gap: 10px;
+}
+
+.faded-line {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0),
+        #333333,
+        rgba(0, 0, 0, 0)
+    );
+    margin: 10px 0;
+}

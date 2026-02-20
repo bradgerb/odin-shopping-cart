@@ -1,27 +1,24 @@
-// import './CartCard.css'
+import './CartCard.css'
 
-const CartCard = () => {
+const CartCard = ({title, price, picture, quantity, cartItems, setCartItems}) => {
 
-
+    let priceDecimals = 
+        new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(price)
 
     return (
         <>
-            <div>check</div>
-            {/* <div className="card">
-                <h1>{shortTitle}</h1>
+            <div className="cartCard">
                 <div className='image'><img src={picture} alt="Item image" height={70}/></div>
-                <div className='text'>{shortDescription}</div>
-                <br />
-                <div className='priceWrapper'>
-                    <div className='price'>{priceDecimals}</div>
-                    <div>Rating: {rating}/5</div>
+                <div>{title}</div>
+                <div className='cartPrice'>
+                    <div>{quantity}</div>
+                    <div>{priceDecimals}</div>
                 </div>
-                <br />
-                <div className='cart'>
-                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" id={number} /></div>
-                    <button className="addToCart" onClick={handleClick}>Add to cart</button>
-                </div>
-            </div> */}
+            </div>
+            <hr class="faded-line"></hr>
         </>
     )
 }
