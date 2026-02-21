@@ -4,7 +4,7 @@ import { ShopGrid } from "./ShopGrid";
 import Nav from "../Navigation/Nav";
 import './Shop.css'
 
-const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
+const Shop = ({shopItems, setShopItems, cartItems, setCartItems, finalPrice, setFinalPrice}) => {
 
     useEffect(() => {
         const getShopData = async()=> {
@@ -27,6 +27,8 @@ const Shop = ({shopItems, setShopItems, cartItems, setCartItems}) => {
                     shopItems = { shopItems }
                     cartItems={ cartItems }
                     setCartItems = { setCartItems }
+                    finalPrice = { finalPrice }
+                    setFinalPrice = { setFinalPrice }
                 />
             </div>
             

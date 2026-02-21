@@ -1,6 +1,6 @@
 import './ShopCard.css'
 
-const ShopCard = ({number, title, price, description, picture, rating, cartItems, setCartItems}) => {
+const ShopCard = ({number, title, price, description, picture, rating, cartItems, setCartItems, finalPrice, setFinalPrice}) => {
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {
@@ -39,9 +39,10 @@ const ShopCard = ({number, title, price, description, picture, rating, cartItems
             title: title,
             price: price,
             picture: picture,
-            quantity: 1,
+            quantity: 2,
         };
         setCartItems([...cartItems, cartObject]);
+        setFinalPrice(finalPrice + (cartObject.price * cartObject.quantity));
     }
 
     return (

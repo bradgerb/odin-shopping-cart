@@ -1,14 +1,15 @@
 .cartCard {
     display: flex;
-    width: 500px;
+    width: 600px;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
 }
 
-.cartPrice {
+.cartTotals {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
 }
 
 .faded-line {

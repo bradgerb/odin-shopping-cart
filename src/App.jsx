@@ -10,6 +10,7 @@ const App = () => {
 
   const [shopItems, setShopItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [finalPrice, setFinalPrice] = useState(0);
 
   const router = createBrowserRouter([
     {
@@ -26,6 +27,8 @@ const App = () => {
         setShopItems = {setShopItems}
         cartItems = {cartItems}
         setCartItems = {setCartItems}
+        finalPrice = {finalPrice}
+        setFinalPrice = {setFinalPrice}
       />
     },
     {
@@ -33,6 +36,8 @@ const App = () => {
       element: <Cart 
         cartItems = {cartItems}
         setCartItems = {setCartItems}
+        finalPrice = {finalPrice}
+        setFinalPrice = {setFinalPrice}
       />
     }
   ]);

@@ -1,6 +1,6 @@
 import { ShopCard } from "../Cards/ShopCard"
 
-const ShopGrid = ({shopItems, cartItems, setCartItems})=> {
+const ShopGrid = ({shopItems, cartItems, setCartItems, finalPrice, setFinalPrice})=> {
 
     return (
         <>
@@ -15,6 +15,8 @@ const ShopGrid = ({shopItems, cartItems, setCartItems})=> {
                         rating = { image.rating }
                         cartItems = { cartItems }
                         setCartItems = { setCartItems }
+                        finalPrice = { finalPrice }
+                        setFinalPrice = { setFinalPrice }
                     />
                 </div>
             ))}

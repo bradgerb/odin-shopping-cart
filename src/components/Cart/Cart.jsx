@@ -2,7 +2,18 @@ import Nav from "../Navigation/Nav";
 import { CartGrid } from "./CardGrid";
 import './Cart.css'
 
-const Cart = ({cartItems, setCartItems}) => {
+const Cart = ({cartItems, setCartItems, finalPrice, setFinalPrice}) => {
+
+  let finalPriceAsCash = 
+    new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(finalPrice)
+
+  const handleCheckout =  ()=> {
+    setCartItems([]);
+    setFinalPrice(0);
+  }
 
   return (
     <>
@@ -11,7 +22,7 @@ const Cart = ({cartItems, setCartItems}) => {
         setCartItems ={setCartItems}
     />
 
-    <h1>This is a cart</h1>
+    <h1>This is a cart!</h1>
 
       <div className="cartGrid">
         <CartGrid 
@@ -19,6 +30,13 @@ const Cart = ({cartItems, setCartItems}) => {
           setCartItems = { setCartItems }
         />
       </div>
+    <div className="checkoutWrapper">
+      <div className="checkout">
+        <button onClick={handleCheckout}>Checkout</button>
+        <div>Total price: {finalPriceAsCash}</div>
+      </div>
+    </div>
+
     </>
   )
 }
