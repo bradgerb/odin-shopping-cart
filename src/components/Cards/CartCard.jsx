@@ -1,6 +1,6 @@
 import './CartCard.css'
 
-const CartCard = ({title, price, picture, quantity, cartItems, setCartItems}) => {
+const CartCard = ({title, price, picture, quantity}) => {
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {

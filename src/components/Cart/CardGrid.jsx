@@ -1,7 +1,7 @@
 import { CartCard } from "../Cards/CartCard"
 import { v4 as uuidv4 } from 'uuid';
 
-const CartGrid = ({cartItems, setCartItems})=> {
+const CartGrid = ({cartItems})=> {
 
     return (
         <>
@@ -13,8 +13,6 @@ const CartGrid = ({cartItems, setCartItems})=> {
                     price = { cart.price }
                     picture = { cart.picture }
                     quantity = { cart.quantity }
-                    cartItems = { cartItems }
-                    setCartItems = { setCartItems }
                 />
             </div>
         ))}
