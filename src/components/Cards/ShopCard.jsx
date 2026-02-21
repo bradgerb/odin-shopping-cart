@@ -44,8 +44,19 @@ const ShopCard = ({number, title, price, description, picture, rating, cartItems
             picture: picture,
             quantity: quantity,
         };
-        setCartItems([...cartItems, cartObject]);
-        setFinalPrice(finalPrice + (cartObject.price * cartObject.quantity));
+
+        if(cartItems.some(e => e.id === cartObject.id)) {
+            let newCartItems = [...cartItems];
+            const i = cartItems.findIndex(e => e.id === cartObject.id);
+            // console.log(newCartItems[i].quantity);
+            // console.log(cartObject.quantity);
+            newCartItems[i].quantity = Number(cartItems[i].quantity) + Number(cartObject.quantity);
+            // console.log(newCartItems[i].quantity);
+            setCartItems(newCartItems);
+        } else {
+            setCartItems([...cartItems, cartObject]);
+            setFinalPrice(finalPrice + (cartObject.price * cartObject.quantity));
+        }
     }
 
     const handleQuantity = (e) => {
