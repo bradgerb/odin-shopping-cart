@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './ShopCard.css'
 
 const ShopCard = ({number, title, price, description, picture, rating, cartItems, setCartItems, finalPrice, setFinalPrice}) => {
+
+    const [quantity, setQuantity] = useState(1);
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {
@@ -39,10 +42,14 @@ const ShopCard = ({number, title, price, description, picture, rating, cartItems
             title: title,
             price: price,
             picture: picture,
-            quantity: 2,
+            quantity: quantity,
         };
         setCartItems([...cartItems, cartObject]);
         setFinalPrice(finalPrice + (cartObject.price * cartObject.quantity));
+    }
+
+    const handleQuantity = (e) => {
+        setQuantity(e.target.value);
     }
 
     return (
@@ -58,7 +65,7 @@ const ShopCard = ({number, title, price, description, picture, rating, cartItems
                 </div>
                 <br />
                 <div className='cart'>
-                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" id={number} /></div>
+                    <div><input className='inputNumber' min={1} max={9} defaultValue={1} type="number" id={number} onChange={handleQuantity} /></div>
                     <button className="addToCart" onClick={handleClick}>Add to cart</button>
                 </div>
             </div>
