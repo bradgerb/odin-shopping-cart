@@ -33,6 +33,9 @@ const CartCard = ({title, price, picture, quantity}) => {
                         <div>Total</div>
                         <div>{totalPrice}</div>
                     </div>
+                    <div className="remove">
+                        <button>X</button>
+                    </div>
                 </div>
             </div>
             <hr className="faded-line"></hr>
