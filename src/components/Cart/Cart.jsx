@@ -31,7 +31,7 @@ const Cart = ({cartItems, setCartItems, finalPrice, setFinalPrice}) => {
       </div>
     <div className="checkoutWrapper">
       <div className="checkout">
-        <button onClick={handleCheckout}>Checkout</button>
+        <button className="checkoutButton" onClick={handleCheckout}>Checkout</button>
         <div>Total price: {finalPriceAsCash}</div>
       </div>
     </div>

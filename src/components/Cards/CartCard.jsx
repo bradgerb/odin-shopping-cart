@@ -18,9 +18,13 @@ const CartCard = ({title, price, picture, quantity}) => {
         <>
             <div className="cartCard">
                 <div className='image'><img src={picture} alt="Item image" height={70}/></div>
-                <div>{title}</div>
+                <div className='title'>{title}</div>
                 <div className='cartTotals'>
-                    <div>{quantity}</div>
+                    <div className='quantity'>
+                        <button className='incrementButtonMinus'>-</button>
+                        <div className="quantityNumber">{quantity}</div>
+                        <button className='incrementButtonPlus'>+</button>
+                    </div>
                     <div>
                         <div>Each</div>
                         <div>{priceDecimals}</div>
