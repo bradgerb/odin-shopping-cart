@@ -35,6 +35,7 @@ const Cart = ({cartItems, setCartItems, finalPrice, setFinalPrice}) => {
         <div className="cartGrid">
           <CartGrid 
             cartItems = { cartItems }
+            setCartItems = { setCartItems }
           />
         </div>
       <div className="checkoutWrapper">

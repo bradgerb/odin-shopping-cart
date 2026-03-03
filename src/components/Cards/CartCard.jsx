@@ -1,6 +1,6 @@
 import './CartCard.css'
 
-const CartCard = ({title, price, picture, quantity}) => {
+const CartCard = ({number, title, price, picture, quantity, cartItems, setCartItems}) => {
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {
@@ -13,6 +13,16 @@ const CartCard = ({title, price, picture, quantity}) => {
             style: 'currency',
             currency: 'USD'
         }).format(price * quantity);
+
+    const handleRemove = ()=>{
+
+        let button = {id: number};
+        const i = cartItems.findIndex(e => e.id === button.id)
+
+        let newCart = [...cartItems];
+        newCart.splice(i, 1);
+        setCartItems(newCart);
+    }
 
     return (
         <>
@@ -34,7 +44,7 @@ const CartCard = ({title, price, picture, quantity}) => {
                         <div>{totalPrice}</div>
                     </div>
                     <div className="remove">
-                        <button className='cartRemove'>X</button>
+                        <button className='cartRemove' id={number} onClick={handleRemove}>X</button>
                     </div>
                 </div>
             </div>
