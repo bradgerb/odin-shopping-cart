@@ -15,27 +15,36 @@ const Cart = ({cartItems, setCartItems, finalPrice, setFinalPrice}) => {
     setFinalPrice(0);
   }
 
+  let template;
+
+  if (cartItems.length === 0) {
+    template = <h1>Cart empty, please visit shop to add items</h1>
+  } else {
+    template = <h1>This is a cart!</h1>
+  }
+
   return (
     <>
       <Nav 
         cartItems = {cartItems}
         setCartItems ={setCartItems}
-    />
+      />
 
-    <h1>This is a cart!</h1>
+      {template}
 
-      <div className="cartGrid">
-        <CartGrid 
-          cartItems = { cartItems }
-        />
+        <div className="cartGrid">
+          <CartGrid 
+            cartItems = { cartItems }
+          />
+        </div>
+      <div className="checkoutWrapper">
+        {cartItems.length > 0 &&
+        <div className="checkout">
+          <button className="checkoutButton" onClick={handleCheckout}>Checkout</button>
+          <div>Total price: {finalPriceAsCash}</div>
+        </div>
+        }
       </div>
-    <div className="checkoutWrapper">
-      <div className="checkout">
-        <button className="checkoutButton" onClick={handleCheckout}>Checkout</button>
-        <div>Total price: {finalPriceAsCash}</div>
-      </div>
-    </div>
-
     </>
   )
 }

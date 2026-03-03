@@ -34,7 +34,7 @@ const CartCard = ({title, price, picture, quantity}) => {
                         <div>{totalPrice}</div>
                     </div>
                     <div className="remove">
-                        <button>X</button>
+                        <button className='cartRemove'>X</button>
                     </div>
                 </div>
             </div>
