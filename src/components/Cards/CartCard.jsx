@@ -1,6 +1,6 @@
 import './CartCard.css'
 
-const CartCard = ({number, title, price, picture, quantity, cartItems, setCartItems}) => {
+const CartCard = ({number, title, price, picture, quantity, cartItems, setCartItems, finalPrice, setFinalPrice}) => {
 
     let priceDecimals = 
         new Intl.NumberFormat('en-US', {
@@ -14,13 +14,41 @@ const CartCard = ({number, title, price, picture, quantity, cartItems, setCartIt
             currency: 'USD'
         }).format(price * quantity);
 
-    const handleRemove = ()=>{
-
-        let button = {id: number};
-        const i = cartItems.findIndex(e => e.id === button.id)
-
+    const removeFromCart = (i)=> {
         let newCart = [...cartItems];
+        setFinalPrice(finalPrice - (newCart[i].price * newCart[i].quantity));
         newCart.splice(i, 1);
+        setCartItems(newCart);
+    }
+
+    const handleRemove = ()=>{
+        let button = {id: number};
+        const i = cartItems.findIndex(e => e.id === button.id);
+        removeFromCart(i);
+    }
+
+    const handleMinus = ()=> {
+        let button = {id: number};
+        const i = cartItems.findIndex(e => e.id === button.id);
+        
+        let newCart = [...cartItems];
+
+        if (newCart[i].quantity > 1) {
+            setFinalPrice(finalPrice - newCart[i].price);
+            newCart[i].quantity--;
+            setCartItems(newCart);
+        } else {
+            removeFromCart(i);
+        }
+    }
+
+    const handlePlus = ()=> {
+        let button = {id: number};
+        const i = cartItems.findIndex(e => e.id === button.id);
+        
+        let newCart = [...cartItems];
+        setFinalPrice(finalPrice + newCart[i].price);
+        newCart[i].quantity++;
         setCartItems(newCart);
     }
 
@@ -31,9 +59,9 @@ const CartCard = ({number, title, price, picture, quantity, cartItems, setCartIt
                 <div className='title'>{title}</div>
                 <div className='cartTotals'>
                     <div className='quantity'>
-                        <button className='incrementButtonMinus'>-</button>
+                        <button className='incrementButtonMinus' onClick={handleMinus}>-</button>
                         <div className="quantityNumber">{quantity}</div>
-                        <button className='incrementButtonPlus'>+</button>
+                        <button className='incrementButtonPlus' onClick={handlePlus}>+</button>
                     </div>
                     <div>
                         <div>Each</div>
